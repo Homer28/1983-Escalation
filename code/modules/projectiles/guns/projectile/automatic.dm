@@ -299,6 +299,7 @@
 	accuracy = 2
 	fire_delay = 3
 	wielded_item_state = "ak-wielded"
+	fire_sound = 'sound/weapons/gunshot/ak74.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=4, burst_accuracy=null, dispersion=null),
@@ -329,6 +330,7 @@
 	accuracy = 1
 	fire_delay = 2
 	wielded_item_state = "ak-wielded"
+	fire_sound = 'sound/weapons/gunshot/ak74.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=2, burst_accuracy=null, dispersion=null),
@@ -359,6 +361,7 @@
 	accuracy = 2
 	fire_delay = 3
 	wielded_item_state = "m16-wielded"
+	fire_sound = 'sound/weapons/gunshot/m16.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=4, burst_accuracy=null, dispersion=null),
@@ -388,6 +391,7 @@
 	accuracy = 1
 	fire_delay = 2
 	wielded_item_state = "m16-wielded"
+	fire_sound = 'sound/weapons/gunshot/m16.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=2, burst_accuracy=null, dispersion=null),
@@ -419,6 +423,7 @@
 	requires_two_hands = 6
 	accuracy = 3
 	wielded_item_state = "ak-wielded"
+	fire_sound = 'sound/weapons/gunshot/rpk47.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=2, burst_accuracy=null, dispersion=null),
@@ -449,6 +454,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x54b
 	requires_two_hands = 9
 	wielded_item_state = "lmg-wielded"
+	fire_sound = 'sound/weapons/gunshot/m60.wav' //временно
 
 	firemodes = list(
 		list(mode_name="short bursts",	burst=5, move_delay=12, requires_two_hands=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
@@ -517,6 +523,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c762x51b
 	requires_two_hands = 9
 	wielded_item_state = "lmg-wielded"
+	fire_sound = 'sound/weapons/gunshot/m60.wav'
 
 	firemodes = list(
 		list(mode_name="short bursts",	burst=5, move_delay=12, requires_two_hands=8, burst_accuracy = list(0,-1,-1,-2,-2),          dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
@@ -585,6 +592,7 @@
 	requires_two_hands = 4
 	accuracy = 3
 	fire_delay = 2
+	fire_sound = 'sound/weapons/gunshot/m14.wav'
 	wielded_item_state = "m14-wielded"
 
 	firemodes = list(
@@ -646,6 +654,7 @@
 	accuracy = 3
 	fire_delay = 3
 	wielded_item_state = "m16-wielded"
+	fire_sound = 'sound/weapons/gunshot/m16.wav'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=4, burst_accuracy=null, dispersion=null),

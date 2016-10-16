@@ -200,6 +200,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/a9x19
 	allowed_magazines = /obj/item/ammo_magazine/a9x19
+	fire_sound = 'sound/weapons/gunshot/m9.wav'
 
 /obj/item/weapon/gun/projectile/berettam9/update_icon()
 	..()
@@ -219,6 +220,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/a9x18
 	allowed_magazines = /obj/item/ammo_magazine/a9x18
+	fire_sound = 'sound/weapons/gunshot/makarov.wav'
 
 /obj/item/weapon/gun/projectile/makarov/update_icon()
 	..()

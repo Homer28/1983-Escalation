@@ -87,6 +87,7 @@
 //called when the projectile stops flying because it collided with something
 /obj/item/projectile/proc/on_impact(var/atom/A)
 	impact_effect(effect_transform)		// generate impact effect
+	playsound(src, "hitobject", 50, 1, -2)
 	return
 
 //Checks if the projectile is eligible for embedding. Not that it necessarily will.
@@ -150,19 +151,19 @@
 		user.bullet_act(src, target_zone)
 		qdel(src)
 		return 0
-	
+
 	loc = get_turf(user) //move the projectile out into the world
-	
+
 	firer = user
 	shot_from = launcher.name
 	silenced = launcher.silenced
-	
+
 	return launch(target, target_zone, x_offset, y_offset)
 
 //Used to change the direction of the projectile in flight.
 /obj/item/projectile/proc/redirect(var/new_x, var/new_y, var/atom/starting_loc, var/mob/new_firer=null)
 	var/turf/new_target = locate(new_x, new_y, src.z)
-	
+
 	original = new_target
 	if(new_firer)
 		firer = src
@@ -191,8 +192,10 @@
 	//hit messages
 	if(silenced)
 		target_mob << "<span class='danger'>You've been hit in the [parse_zone(def_zone)] by \the [src]!</span>"
+		playsound(src, "hit", 50, 1, -5)
 	else
 		target_mob.visible_message("<span class='danger'>\The [target_mob] is hit by \the [src] in the [parse_zone(def_zone)]!</span>")//X has fired Y is now given by the guns so you cant tell who shot you if you could not see the shooter
+		playsound(src, "hit", 50, 1, -5)
 
 	//admin logs
 	if(!no_attack_log)
@@ -408,9 +411,9 @@
 	var/turf/targloc = get_turf(target)
 	if(!curloc || !targloc)
 		return 0
-	
+
 	original = target
-	
+
 	//plot the initial trajectory
 	setup_trajectory(curloc, targloc)
 	return process(targloc)
@@ -444,7 +447,7 @@
 
 	//Set the flags and pass flags to that of the real projectile...
 	if(!isnull(flags))
-		trace.flags = flags 
+		trace.flags = flags
 	trace.pass_flags = pass_flags
 
 	var/output = trace.launch(target) //Test it!

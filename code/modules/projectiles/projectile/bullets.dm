@@ -216,7 +216,7 @@
 	edge = 1
 
 /obj/item/projectile/bullet/gyro
-	fire_sound = 'sound/effects/Explosion1.ogg'
+	fire_sound = 'sound/effects/explosion1.wav'
 
 /obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
 	if(isturf(target))
@@ -260,60 +260,55 @@
 //Rifle caliber
 
 /obj/item/projectile/bullet/rifle/a762x39
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 30
 	agony = 10
+	fire_sound = 'sound/weapons/gunshot/rpk47.wav'
 
 /obj/item/projectile/bullet/rifle/a762x39/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 20
 	agony = 10
 	armor_penetration = 10
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a762x51
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 35
 	agony = 10
+	fire_sound = 'sound/weapons/gunshot/m60.wav'
 
 /obj/item/projectile/bullet/rifle/a762x51/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 25
 	agony = 10
 	armor_penetration = 10
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a762x54
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 40
 	agony = 15
+	fire_sound = 'sound/weapons/gunshot/svd.wav'
 
 /obj/item/projectile/bullet/rifle/a762x54/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 25
 	agony = 10
 	armor_penetration = 25
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a545x39
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 25
 	agony = 20
+	fire_sound = 'sound/weapons/gunshot/ak74.wav'
 
 /obj/item/projectile/bullet/rifle/a545x39/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 20
 	agony = 10
 	armor_penetration = 20
 	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a556x45
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 25
 	agony = 20
+	fire_sound = 'sound/weapons/gunshot/m16.wav'
 
 /obj/item/projectile/bullet/rifle/a556x45/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 20
 	agony = 10
 	armor_penetration = 20
@@ -322,20 +317,19 @@
 //Pistol caliber
 
 /obj/item/projectile/bullet/rifle/a9x19
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 15
+	fire_sound = 'sound/weapons/gunshot/m9.wav'
 
 /obj/item/projectile/bullet/rifle/a9x19/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 15
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a9x18
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 15
+	fire_sound = 'sound/weapons/gunshot/makarov.wav'
+
 
 /obj/item/projectile/bullet/rifle/a9x18/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 15
 	armor_penetration = 15
 
