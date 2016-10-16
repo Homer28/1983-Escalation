@@ -409,7 +409,7 @@
 	qdel(src)
 
 /obj/machinery/power/port_gen/pacman/mrs
-	name = "M.R.S.P.A.C.M.A.N.-type Portable Generator"
+	name = "Portable Generator"
 	desc = "An advanced power generator that runs on tritium. Rated for 200 kW maximum safe output!"
 	icon_state = "portgen2"
 	sheet_path = /obj/item/stack/material/tritium

@@ -11,7 +11,7 @@
 	muzzle_type = null
 
 /obj/item/projectile/bullet/pellet/fragment/strong
-	damage = 15
+	damage = 12
 
 /obj/item/weapon/grenade/frag
 	name = "fragmentation grenade"
@@ -84,4 +84,26 @@
 
 /obj/item/weapon/grenade/frag/high_yield/on_explosion(var/turf/O)
 	if(explosion_size)
-		explosion(O, -1, round(explosion_size/2), explosion_size, round(explosion_size/2), 0) //has a chance to blow a hole in the floor
+		explosion(O, -1, round(explosion_size/2), explosion_size, round(explosion_size/2), 0)
+		//has a chance to blow a hole in the floor
+
+/obj/item/weapon/grenade/frag/f1
+	name = "F1 frag grenade"
+	desc = "That's an old but reliable Soviet fragmentation grenade used for eliminating manpower."
+	icon_state = "f1grenade"
+	throw_speed = 2
+	throw_range = 7
+	fragment_type = /obj/item/projectile/bullet/pellet/fragment/strong
+	num_fragments = 180  //total number of fragments produced by the grenade
+	explosion_size = 3
+
+/obj/item/weapon/grenade/frag/m67
+	name = "M67 frag grenade"
+	desc = "That's a grenade used by US army."
+	icon_state = "m67grenade"
+	throw_speed = 5
+	throw_range = 10
+	fragment_type = /obj/item/projectile/bullet/pellet/fragment/strong
+	num_fragments = 160  //total number of fragments produced by the grenade
+	explosion_size = 2
+

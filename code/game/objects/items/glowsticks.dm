@@ -6,7 +6,7 @@
 	name = "glowstick"
 	desc = "A glowstick, provides a small amount of light when it "
 	icon = 'icons/obj/lighting.dmi'
-	brightness_on = 2
+	brightness_on = 4
 	light_power = 2
 	icon_state = "glowstick"
 	item_state = "glowstick"

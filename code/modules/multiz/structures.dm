@@ -83,38 +83,6 @@
 /obj/structure/ladder/up
 	allowed_directions = UP
 
-/obj/structure/ladder/up/bunker11
-	allowed_directions = UP
-	target_up = /obj/structure/ladder/down/bunker12
-
-/obj/structure/ladder/up/bunker21
-	allowed_directions = UP
-	target_up = /obj/structure/ladder/down/bunker22
-
-/obj/structure/ladder/up/bunker31
-	allowed_directions = UP
-	target_up = /obj/structure/ladder/down/bunker32
-
-/obj/structure/ladder/up/bunker41
-	allowed_directions = UP
-	target_up = /obj/structure/ladder/down/bunker42
-
-/obj/structure/ladder/down/bunker12
-	allowed_directions = DOWN
-	target_down = /obj/structure/ladder/up/bunker11
-
-/obj/structure/ladder/down/bunker22
-	allowed_directions = DOWN
-	target_down = /obj/structure/ladder/up/bunker21
-
-/obj/structure/ladder/down/bunker32
-	allowed_directions = DOWN
-	target_down = /obj/structure/ladder/up/bunker31
-
-/obj/structure/ladder/down/bunker42
-	allowed_directions = DOWN
-	target_down = /obj/structure/ladder/up/bunker41
-
 /obj/structure/ladder/updown
 	allowed_directions = UP|DOWN
 

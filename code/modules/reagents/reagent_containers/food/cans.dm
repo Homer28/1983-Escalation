@@ -126,9 +126,9 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/stew/update_icon()
 	..()
 	if(flags = OPENCONTAINER)
-		icon_state = "stew_closed"
-	else
 		icon_state = "stew_open"
+	else
+		icon_state = "stew_closed"
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/stewpearlbarley
 	name = "stew with pearl barley tin can"
@@ -143,9 +143,9 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/stewpearlbarley/update_icon()
 	..()
 	if(flags = OPENCONTAINER)
-		icon_state = "pearlbarleystew_closed"
-	else
 		icon_state = "pearlbarleystew_open"
+	else
+		icon_state = "pearlbarleystew_closed"
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/condensedmilk
 	name = "condensed milk tin can"

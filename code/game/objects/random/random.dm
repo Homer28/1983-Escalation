@@ -324,17 +324,8 @@
 					/obj/item/weapon/material/shard/shrapnel,\
 					/obj/item/stack/material/cardboard,\
 					/obj/item/weapon/storage/box/lights/mixed,\
-					/obj/item/trash/raisins,\
-					/obj/item/trash/candy,\
-					/obj/item/trash/cheesie,\
-					/obj/item/trash/chips,\
-					/obj/item/trash/popcorn,\
-					/obj/item/trash/sosjerky,\
-					/obj/item/trash/syndi_cakes,\
-					/obj/item/trash/waffles,\
 					/obj/item/trash/plate,\
 					/obj/item/trash/snack_bowl,\
-					/obj/item/trash/pistachios,\
 					/obj/item/trash/semki,\
 					/obj/item/trash/tray,\
 					/obj/item/trash/candle,\
@@ -349,8 +340,6 @@
 					/obj/item/weapon/pen/blue,\
 					/obj/item/weapon/pen/red,\
 					/obj/item/weapon/pen/multi,\
-					/obj/item/weapon/bananapeel,\
-					/obj/item/inflatable/torn,\
 					/obj/item/weapon/storage/box/matches)
 
 

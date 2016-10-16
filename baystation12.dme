@@ -2180,6 +2180,7 @@
 #include "interface\skin.dmf"
 #include "maps\_map_include.dm"
 #include "maps\coldwar-kaliningrad\coldwar.dm"
+#include "maps\coldwar-kaliningrad\coldwar_areas.dm"
 #include "maps\coldwar-kaliningrad\coldwar_define.dm"
 #include "maps\coldwar-kaliningrad\coldwar_jobs.dm"
 #include "maps\example\example_define.dm"

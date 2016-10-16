@@ -19,9 +19,9 @@
 		qdel(src)*/
 	//vars stolen for fragification
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
-	var/num_fragments = 82  //total number of fragments produced by the grenade
+	var/num_fragments = 180  //total number of fragments produced by the grenade
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
-	var/spread_range = 7 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
+	var/spread_range = 8 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
 
 	//blatant copypaste from frags, but those are a whole different type so vOv
 	set waitfor = 0
@@ -88,9 +88,9 @@
 		qdel(src)*/
 	//vars stolen for fragification
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
-	var/num_fragments = 98  //total number of fragments produced by the grenade
+	var/num_fragments = 200  //total number of fragments produced by the grenade
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
-	var/spread_range = 8 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
+	var/spread_range = 6 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
 
 	//blatant copypaste from frags, but those are a whole different type so vOv
 	set waitfor = 0
