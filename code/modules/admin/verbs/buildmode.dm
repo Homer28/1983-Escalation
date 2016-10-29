@@ -390,15 +390,15 @@
 				holder.buildmode.coordB = get_turf(object)
 				user << "<span class='notice'>Defined [object] ([object.type]) as lower ladder location.</span>"
 
-			if(holder.buildmode.coordA && holder.buildmode.coordB)
+			/*if(holder.buildmode.coordA && holder.buildmode.coordB)
 				user << "<span class='notice'>Ladder locations set, building ladders.</span>"
 				var/obj/structure/ladder/A = new /obj/structure/ladder(holder.buildmode.coordA)
 				var/obj/structure/ladder/B = new /obj/structure/ladder(holder.buildmode.coordB)
-				A.target_down = B
-				B.target_up = A
+				//A.target_down = B
+				//B.target_up = A
 				B.icon_state = "ladderup"
 				holder.buildmode.coordA = null
-				holder.buildmode.coordB = null
+				holder.buildmode.coordB = null*/
 		if(7) // Move into contents
 			if(pa.Find("left"))
 				if(istype(object, /atom))
