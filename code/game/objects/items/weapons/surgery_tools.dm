@@ -138,7 +138,7 @@
 
 //misc, formerly from code/defines/weapons.dm
 /obj/item/weapon/bonegel
-	name = "bone gel"
+	name = "medical glue"
 	desc = "That's the experimental medication used for quick fixing of the bone fracturies."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bone-gel"

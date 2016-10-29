@@ -48,8 +48,10 @@
 
 /obj/machinery/power/apc/critical
 	is_critical = 1
+	locked = 0
 
 /obj/machinery/power/apc/high
+	locked = 0
 	cell_type = /obj/item/weapon/cell/high
 
 // Construction site APC, starts turned off
@@ -92,7 +94,7 @@
 	var/charging = 0
 	var/chargemode = 1
 	var/chargecount = 0
-	var/locked = 1
+	var/locked = 0
 	var/coverlocked = 1
 	var/aidisabled = 0
 	var/tdir = null

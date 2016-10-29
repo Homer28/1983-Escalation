@@ -668,3 +668,35 @@
 		icon_state = "m16a2"
 	else
 		icon_state = "m16a2-empty"
+
+
+/obj/item/weapon/gun/projectile/automatic/svd
+	name = "SVD"
+	desc = "That's the SVD, a standard-issue sniper rifle used by SA."
+	icon_state = "svd"
+	item_state = "m14"
+	slot_flags = SLOT_BACK
+	w_class = 5
+	force = 10
+	max_shells = 10
+	caliber = "762x54"
+	ammo_type = /obj/item/ammo_casing/a762x54
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/c762x54s
+	allowed_magazines = /obj/item/ammo_magazine/c762x54s
+	requires_two_hands = 4
+	accuracy = 5
+	fire_delay = 1
+	fire_sound = 'sound/weapons/gunshot/svd.wav'
+	wielded_item_state = "m14-wielded"
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, requires_two_hands=5, burst_accuracy=null, dispersion=null),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/svd/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "svd"
+	else
+		icon_state = "svd-empty"

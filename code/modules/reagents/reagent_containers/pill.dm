@@ -134,10 +134,10 @@
 /obj/item/weapon/reagent_containers/pill/paracetamol
 	name = "Paracetamol pill"
 	desc = "Tylenol! A painkiller for the ages. Chewables!"
-	icon_state = "pill8"
+	icon_state = "pill21"
 	New()
 		..()
-		reagents.add_reagent("paracetamol", 15)
+		reagents.add_reagent("paracetamol", 10)
 
 /obj/item/weapon/reagent_containers/pill/tramadol
 	name = "Tramadol pill"
@@ -295,3 +295,28 @@
 	New()
 		..()
 		reagents.add_reagent("sydnocarbum", 5)
+
+/obj/item/weapon/reagent_containers/pill/morphine
+	name = "Morphine pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("morphine", 5)
+
+
+/obj/item/weapon/reagent_containers/pill/naloxone
+	name = "Naloxone pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("naloxone", 5)
+
+/obj/item/weapon/reagent_containers/pill/promethazine
+	name = "promethazine pill"
+	desc = "That's a pill."
+	icon_state = "pill21"
+	New()
+		..()
+		reagents.add_reagent("promethazine", 5)

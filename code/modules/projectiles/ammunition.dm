@@ -8,6 +8,7 @@
 	slot_flags = SLOT_BELT | SLOT_EARS
 	throwforce = 1
 	w_class = 1
+	randpixel = 1
 
 	var/leaves_residue = 1
 	var/caliber = ""					//Which kind of guns it can be loaded into

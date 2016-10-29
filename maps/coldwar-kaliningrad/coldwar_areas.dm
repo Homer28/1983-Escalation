@@ -4,6 +4,7 @@
 	icon_state = "hallF"
 	requires_power = 1
 	lighting_use_dynamic = 1
+	base_turf = /turf/snow/gravsnow
 
 /area/coldwar/outside
 	name = "outside"
@@ -135,3 +136,9 @@
 	name = "cafe"
 	icon_state = "house"
 	sound_env = LIVINGROOM
+
+/area/coldwar/usmcfob
+	name = "USMC FOB"
+	icon_state = "usmcfob"
+	sound_env = PLAIN
+	ambience = list ('sound/ambience/coldwar/fly.wav','sound/ambience/coldwar/plane1.wav','sound/ambience/coldwar/plane2.wav','sound/ambience/coldwar/plane3.wav')

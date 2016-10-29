@@ -33,3 +33,45 @@
 	user.drop_item(src)
 	user.visible_message("\The [user] attaches \the [src] to \the [target]")
 	qdel(src)
+
+/obj/item/weapon/material/lock_construct/soviet/sgt
+	lock_data = "sovsgt"
+
+/obj/item/weapon/material/lock_construct/soviet/lt
+	lock_data = "sovlt"
+
+/obj/item/weapon/material/lock_construct/oviet/snp
+	lock_data = "sovsnp"
+
+/obj/item/weapon/material/lock_construct/soviet/gr
+	lock_data = "sovgr"
+
+/obj/item/weapon/material/lock_construct/soviet/med
+	lock_data = "sovmed"
+
+/obj/item/weapon/material/lock_construct/soviet/rad
+	lock_data = "sovrad"
+
+/obj/item/weapon/material/lock_construct/soviet/cpl
+	lock_data = "sovcpk"
+
+/obj/item/weapon/material/lock_construct/usmc/sgt
+	lock_data = "ussgt"
+
+/obj/item/weapon/material/lock_construct/usmc/lt
+	lock_data = "uslt"
+
+/obj/item/weapon/material/lock_construct/usmc/snp
+	lock_data = "ussnp"
+
+/obj/item/weapon/material/lock_construct/usmc/gr
+	lock_data = "usgr"
+
+/obj/item/weapon/material/lock_construct/usmc/med
+	lock_data = "usmed"
+
+/obj/item/weapon/material/lock_construct/usmc/rad
+	lock_data = "usrad"
+
+/obj/item/weapon/material/lock_construct/usmc/cpl
+	lock_data= "uscpl"

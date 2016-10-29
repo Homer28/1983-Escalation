@@ -242,6 +242,13 @@
 	icon_opened = "o2crateopen"
 	icon_closed = "o2crate"
 
+/obj/structure/closet/crate/wood
+	name = "wooden crate"
+	desc = "A wooden crate."
+	icon_state = "woodcrate"
+	icon_opened = "woodcrateopen"
+	icon_closed = "woodcrate"
+
 /obj/structure/closet/crate/trashcart
 	name = "trash cart"
 	desc = "A heavy, metal trashcart with wheels."

@@ -1,7 +1,7 @@
 /datum/map/kaliningrad
 	allowed_jobs = list(/datum/job/sovsoldier, /datum/job/sovmg, /datum/job/sovrad, /datum/job/sovdep, /datum/job/sovgren,
 						/datum/job/sovserg, /datum/job/sovmed,
-						/datum/job/sovint, /datum/job/sovcom
+						/datum/job/sovcom
 						)
 
 /datum/job/sovsoldier
@@ -61,20 +61,11 @@
 /datum/job/sovmed
 	title = "Saninstruktor"
 	department = "Science"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the higher command"
 	selection_color = "C30A0A"
 	outfit_type = /decl/hierarchy/outfit/job/soviet/saninstruktor
-
-/datum/job/sovint
-	title = "Praporshik"
-	department = "Science"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the higher command"
-	selection_color = "C30A0A"
-	outfit_type = /decl/hierarchy/outfit/job/soviet/praporshik
 
 /datum/job/sovcom
 	title = "Komandir Vzvoda"

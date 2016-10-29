@@ -5,6 +5,64 @@
 	density = 1
 	pixel_x = -16
 	layer = 9
+	var/chops = 0 //how many times it's been chopped. Gotta make them work for it!
+	var/small = 0
+
+/obj/structure/flora/tree/attackby(var/obj/item/I, mob/user as mob)
+	if(istype(I, /obj/item/weapon/carpentry/axe))
+		user << "<span class='notice'>You chop [src] with [I].</span>"
+
+		playsound(src.loc, 'sound/effects/chopchop.ogg', 100, 1)
+
+		sleep(5)
+
+
+		chops += 1
+
+		if(chops == 4 && small)
+			user << "<span class='notice'>[src] comes crashing down!</span>"
+			playsound(src.loc, 'sound/effects/treefalling.ogg', 100, 1)
+			new /obj/structure/log(src.loc)
+
+			qdel(src)
+
+		else if(chops == 8)
+			user << "<span class='notice'>[src] comes crashing down!</span>"
+
+			sleep(5)
+
+			playsound(src.loc, 'sound/effects/treefalling.ogg', 100, 1)
+
+			new /obj/structure/log(get_step(src, NORTH))
+			new /obj/structure/log(src.loc)
+			var/obj/structure/log/L = new /obj/structure/log(get_step(src, NORTH))
+
+			L.y += 1
+
+			qdel(src)
+
+	return
+
+/obj/structure/log
+	icon = 'icons/obj/wood.dmi'
+	icon_state = "log"
+	density = 1
+	anchored = 0
+
+/obj/structure/log/attackby(var/obj/item/I, mob/user as mob)
+	if(istype(I, /obj/item/weapon/carpentry/saw))
+		user << "<span class='notice'>You saw the [src] with [I].</span>"
+
+		if(do_after(user, 20))
+
+			var/obj/item/stack/material/r_wood/W = new /obj/item/stack/material/r_wood(src.loc)
+
+			W.pixel_y = src.pixel_y
+			W.amount = rand(3,6) //going to mess with this value for a while, we'll see
+
+			qdel(src)
+
+	return
 
 /obj/structure/flora/tree/pine
 	name = "pine tree"
@@ -38,6 +96,23 @@
 	name = "grass"
 	icon = 'icons/obj/flora/snowflora.dmi'
 	anchored = 1
+	var/indestructable = 0
+	var/stump = 0
+
+/obj/structure/flora/grass/attackby(var/obj/I as obj, var/mob/user as mob)
+	//hatchets can clear away undergrowth
+	if(istype(I, /obj/item/weapon/material/hatchet) || istype(I, /obj/item/weapon/carpentry/axe))
+		if(indestructable)
+			//this bush marks the edge of the map, you can't destroy it
+			user << "\red You flail away at the undergrowth, but it's too thick here."
+			return
+
+		else
+			user.visible_message("\red <b>[user] begins clearing away [src].</b>","\red <b>You begin clearing away [src].</b>")
+			spawn(rand(15,30))
+				if(get_dist(user,src) < 2)
+					user << "\blue You clear away [src]."
+					qdel(src)
 
 /obj/structure/flora/grass/brown
 	icon_state = "snowgrass1bb"
@@ -68,10 +143,42 @@
 	icon = 'icons/obj/flora/snowflora.dmi'
 	icon_state = "snowbush1"
 	anchored = 1
+	var/indestructable = 0
+	var/stump = 0
 
 /obj/structure/flora/bush/New()
 	..()
 	icon_state = "snowbush[rand(1, 6)]"
+
+/obj/structure/flora/bush/attackby(var/obj/I as obj, var/mob/user as mob)
+	//hatchets can clear away undergrowth
+	if(istype(I, /obj/item/weapon/material/hatchet) || istype(I, /obj/item/weapon/carpentry/axe))
+		if(indestructable)
+			//this bush marks the edge of the map, you can't destroy it
+			user << "\red You flail away at the undergrowth, but it's too thick here."
+			return
+
+		if(stump)
+			user << "\blue You clear away the stump."
+			qdel(src)
+
+		else if(!stump)
+			user.visible_message("\red <b>[user] begins clearing away [src].</b>","\red <b>You begin clearing away [src].</b>")
+			spawn(rand(15,30))
+				if(get_dist(user,src) < 2)
+					user << "\blue You clear away [src]."
+					if(prob(50))
+						name = "cleared foliage"
+						desc = "There used to be dense undergrowth here."
+						density = 0
+						opacity = 0 //so we don't get any opaque stumps from thick bushes
+						stump = 1
+						pixel_x = rand(-6,6)
+						pixel_y = rand(-6,6)
+						icon_state = "[icon_state]-stump"
+
+					else
+						qdel(src)
 
 /obj/structure/flora/pottedplant
 	name = "potted plant"

@@ -21,6 +21,7 @@
 /datum/surgery_step/internal/fix_organ
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/bruise_pack= 100,		\
+	/obj/item/weapon/bonegel = 80,		\
 	/obj/item/stack/medical/bruise_pack = 20
 	)
 
@@ -45,6 +46,8 @@
 	var/tool_name = "\the [tool]"
 	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
 		tool_name = "regenerative membrane"
+	if (istype(tool, /obj/item/weapon/bonegel))
+		tool_name = "medical glue"
 	else if (istype(tool, /obj/item/stack/medical/bruise_pack))
 		tool_name = "the bandaid"
 
@@ -65,6 +68,8 @@
 	var/tool_name = "\the [tool]"
 	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
 		tool_name = "regenerative membrane"
+	if (istype(tool, /obj/item/weapon/bonegel))
+		tool_name = "medical glue"
 	if (istype(tool, /obj/item/stack/medical/bruise_pack))
 		tool_name = "the bandaid"
 
