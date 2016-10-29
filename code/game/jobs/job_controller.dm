@@ -393,6 +393,7 @@ var/global/datum/controller/occupations/job_master
 			job.setup_account(H)
 			job.equip(H, H.mind ? H.mind.role_alt_title : "")
 			job.apply_fingerprints(H)
+			job.update_character(H)
 
 			//If some custom items could not be equipped before, try again now.
 			for(var/thing in custom_equip_leftovers)

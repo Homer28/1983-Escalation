@@ -84,6 +84,9 @@
 		return FALSE
 	. = outfit.equip_base(H, title, alt_title)
 
+/datum/job/proc/update_character(var/mob/living/carbon/human/H)
+	return 1
+
 /datum/job/proc/get_access()
 	if(!config || config.jobs_have_minimal_access)
 		return src.minimal_access.Copy()
