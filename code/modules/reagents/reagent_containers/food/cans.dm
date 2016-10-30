@@ -125,7 +125,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/stew/update_icon()
 	..()
-	if(flags = OPENCONTAINER)
+	if(flags == OPENCONTAINER)
 		icon_state = "stew_open"
 	else
 		icon_state = "stew_closed"
@@ -142,7 +142,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/stewpearlbarley/update_icon()
 	..()
-	if(flags = OPENCONTAINER)
+	if(flags == OPENCONTAINER)
 		icon_state = "pearlbarleystew_open"
 	else
 		icon_state = "pearlbarleystew_closed"
@@ -159,7 +159,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/condensedmilk/update_icon()
 	..()
-	if(flags = OPENCONTAINER)
+	if(flags == OPENCONTAINER)
 		icon_state = "condensedmilk_open"
 	else
 		icon_state = "condensedmilk_closed"
@@ -176,7 +176,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/stewbuckwheat/update_icon()
 	..()
-	if(flags = OPENCONTAINER)
+	if(flags == OPENCONTAINER)
 		icon_state = "stewbuckwheat_open"
 	else
 		icon_state = "stewbuckwheat_closed"
@@ -192,7 +192,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/buckwheat/update_icon()
 	..()
-	if(flags = OPENCONTAINER)
+	if(flags == OPENCONTAINER)
 		icon_state = "buckwheat_open"
 	else
 		icon_state = "buckwheat_closed"
