@@ -10,7 +10,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_medic, access_ru_surgerist, access_ru_engineer, access_ru_heavy_weapon, access_ru_squad_leader, access_ru_cook, access_ru_commander)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/commander_russian/update_character(var/mob/living/carbon/human/H)
+/datum/job/commander_russian/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(50))
@@ -29,7 +29,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_medic, access_ru_surgerist, access_ru_engineer, access_ru_heavy_weapon, access_ru_squad_leader, access_ru_cook, access_ru_commander)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/commander_russian/update_character(var/mob/living/carbon/human/H)
+/datum/job/commander_russian/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(80))
@@ -48,7 +48,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_medic, access_ru_surgerist, access_ru_engineer, access_ru_heavy_weapon, access_ru_squad_leader, access_ru_cook)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_squadleadern/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_squadleadern/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(15))
@@ -66,7 +66,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_medic)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_medic/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_medic/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(10))
@@ -84,7 +84,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_medic, access_ru_surgerist)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_surgeon/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_surgeon/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(20))
@@ -101,7 +101,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_engineer)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_engie/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_engie/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(3))
@@ -119,7 +119,7 @@
 //	minimal_access = list(access_ru_soldier, access_ru_heavy_weapon)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/heavy_weapon_russian/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_lmg/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(3))
@@ -137,7 +137,7 @@
 //	minimal_access = list(access_ru_soldier)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_private/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_private/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(3))
@@ -154,7 +154,7 @@
 //	minimal_access = list(access_ru_soldier)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_corporal/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_corporal/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(3))
@@ -171,7 +171,7 @@
 //	minimal_access = list(access_ru_soldier)
 //	spawn_location = "JoinLateRussia"
 
-/datum/job/warpac_radio/update_character(var/mob/living/carbon/human/H)
+/datum/job/warpac_radio/(var/mob/living/carbon/human/H)
 	H.add_language("Russian")
 	H.default_language = all_languages["Russian"]
 	if(prob(3))

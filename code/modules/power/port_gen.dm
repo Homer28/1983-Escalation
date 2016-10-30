@@ -437,12 +437,12 @@
 	sheet_path = /obj/item/stack/material/r_wood
 	sheet_name = "Wood Planks"
 
-	power_gen = 20000 //watts
+	power_gen = 40000 //watts
 	max_power_output = 20
 	max_safe_output = 15
 	time_per_sheet = 576
-	max_temperature = 1400
-	temperature_gain = 160
+	max_temperature = 2000
+	temperature_gain = 80
 	board_path = /obj/item/weapon/circuitboard/pacman/wood
 
 /obj/machinery/power/port_gen/pacman/wood/explode()

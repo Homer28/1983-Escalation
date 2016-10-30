@@ -29,7 +29,7 @@
 /obj/item/weapon/pickaxe/old
 	name = "pickaxe"
 	desc = "The most basic of mining tools, for short excavations and small mineral extractions."
-	icon = 'icons/obj/wood.dmi
+	icon = 'icons/obj/wood.dmi'
 	icon_state = "pickaxe"
 	item_state = "pickaxe"
 	matter = list(DEFAULT_WALL_MATERIAL = 2000, "wood" = 900)

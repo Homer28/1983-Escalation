@@ -10,7 +10,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_commander/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_commander/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(10))
@@ -28,7 +28,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_commander/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_commander/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(20))
@@ -46,7 +46,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_messenger/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_messenger/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(50))
@@ -64,7 +64,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_squadleader/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_squadleader/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(50))
@@ -82,7 +82,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_fireteamleader/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_fireteamleader/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(6))
@@ -100,7 +100,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_fireteamlmg/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_fireteamlmg/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(3))
@@ -118,7 +118,7 @@
 //	minimal_access = list(access_nato_soldier, access_nato_medic, access_nato_surgerist, access_nato_engineer, access_nato_heavy_weapon, access_nato_cook, access_nato_squad_leader, access_nato_commander)
 //	spawn_location = "JoinLateNATO"
 
-/datum/job/nato_fireteamammo/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_fireteamammo/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(3))
@@ -137,7 +137,7 @@
 //	spawn_location = "JoinLateNATO"
 
 
-/datum/job/nato_fireteamscout/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_fireteamscout/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(6))
@@ -156,7 +156,7 @@
 //	spawn_location = "JoinLateNATO"
 
 
-/datum/job/nato_combatmedic/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_combatmedic/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(10))
@@ -175,7 +175,7 @@
 //	spawn_location = "JoinLateNATO"
 
 
-/datum/job/nato_corpsman/update_character(var/mob/living/carbon/human/H)
+/datum/job/nato_corpsman/(var/mob/living/carbon/human/H)
 	H.add_language("English")
 	H.default_language = all_languages["English"]
 	if(prob(10))
