@@ -181,6 +181,9 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/small/red
 	light_type = /obj/item/weapon/light/bulb/red
 
+/obj/machinery/light/small/surgery
+	light_type = /obj/item/weapon/light/bulb/surgery
+
 /obj/machinery/light/spot
 	name = "spotlight"
 	light_type = /obj/item/weapon/light/tube/large
@@ -619,7 +622,7 @@ obj/machinery/light/proc/burn_out()
 	broken_chance = 5
 	matter = list("glass" = 100)
 
-	brightness_range = 4
+	brightness_range = 6
 	brightness_power = 2
 	brightness_color = "#a0a080"
 	lighting_modes = list(
@@ -629,6 +632,14 @@ obj/machinery/light/proc/burn_out()
 /obj/item/weapon/light/bulb/red
 	color = "#da0205"
 	brightness_color = "#da0205"
+	brightness_range = 4
+	brightness_power = 1
+
+//for the hospital
+
+/obj/item/weapon/light/bulb/surgery
+	color = "#B0DCEA"
+	brightness_color = "#B0DCEA"
 
 /obj/item/weapon/light/throw_impact(atom/hit_atom)
 	..()

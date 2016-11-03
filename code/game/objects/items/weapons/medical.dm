@@ -108,6 +108,26 @@
 	desc = "Will help you not bit off your own tongue when you get a pain shock."
 	pill_type = /obj/item/weapon/reagent_containers/pill/amidopyrinum
 
+/obj/item/weapon/pill_pack/paracetamol
+	name = "paracetamol pill pack"
+	desc = "Such a useless stuff!"
+	pill_type = /obj/item/weapon/reagent_containers/pill/paracetamol
+
+/obj/item/weapon/pill_pack/morphine
+	name = "morphine pill pack"
+	desc = "Like in on of the Bulgakov's novels"
+	pill_type = /obj/item/weapon/reagent_containers/pill/morphine
+
+/obj/item/weapon/pill_pack/naloxone
+	name = "naloxone pill pack"
+	desc = "You have no idea what's that."
+	pill_type = /obj/item/weapon/reagent_containers/pill/naloxone
+
+/obj/item/weapon/pill_pack/promethazine
+	name = "promethazine pill pack"
+	desc = "You have no idea what's that."
+	pill_type = /obj/item/weapon/reagent_containers/pill/promethazine
+
 
 //////////////////////////
 ////Gauze Packs Define////

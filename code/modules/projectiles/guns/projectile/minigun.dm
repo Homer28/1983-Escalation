@@ -26,7 +26,7 @@
 	var/user_old_y = 0
 
 /obj/item/weapon/gun/projectile/minigun/attack_hand(mob/user)
-	if(interact(user) == src)
+	if(process(user) == src)
 		if(firemodes.len > 1)
 			switch_firemodes(user)
 	else
@@ -34,7 +34,7 @@
 		var/turf/T = get_step(src.loc, grip_dir)
 		if(user.loc == T)
 			if(user.get_active_hand() == null && user.get_inactive_hand() == null)
-				interact(user)
+				process(user)
 			else
 				user << "\red Your hands are busy by holding things."
 		else

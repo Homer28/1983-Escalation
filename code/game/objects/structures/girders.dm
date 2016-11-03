@@ -248,3 +248,13 @@
 		user << "<span class='notice'>You drill through the girder!</span>"
 		new /obj/item/remains/human(get_turf(src))
 		dismantle()
+
+
+/obj/structure/girder/tanktrap
+	icon_state = "tanktrap"
+	icon = 'icons/obj/structures.dmi'
+	anchored = 1
+	health = 200
+	cover = 30
+
+

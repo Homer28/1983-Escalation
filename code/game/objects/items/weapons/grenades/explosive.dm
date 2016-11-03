@@ -11,7 +11,7 @@
 	muzzle_type = null
 
 /obj/item/projectile/bullet/pellet/fragment/strong
-	damage = 12
+	damage = 10
 
 /obj/item/weapon/grenade/frag
 	name = "fragmentation grenade"
@@ -94,8 +94,8 @@
 	throw_speed = 2
 	throw_range = 7
 	fragment_type = /obj/item/projectile/bullet/pellet/fragment/strong
-	num_fragments = 180  //total number of fragments produced by the grenade
-	explosion_size = 3
+	num_fragments = 190  //total number of fragments produced by the grenade
+	explosion_size = 1
 
 /obj/item/weapon/grenade/frag/m67
 	name = "M67 frag grenade"

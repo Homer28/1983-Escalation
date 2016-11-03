@@ -204,15 +204,6 @@
 		..()
 		reagents.add_reagent("bicaridine", 10)
 
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/promedolum
-	name = "promedolum injector"
-	cap_color = "green"
-
-	New()
-		..()
-		reagents.add_reagent("oxycodone", 5)
-		reagents.add_reagent("methylphenidate", 5)
-
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/peridaxon
 	name = "peridaxon injector"
 	cap_color = "green"
@@ -220,3 +211,29 @@
 	New()
 		..()
 		reagents.add_reagent("peridaxon", 10)
+
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/quickclot
+	name = "quikclot autoinjector"
+	cap_color = "red"
+
+	New()
+		..()
+		reagents.add_reagent("hemostatic", 5)
+
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/promedolum
+	name = "promedolum autoinjector"
+	cap_color = "green"
+
+	New()
+		..()
+		reagents.add_reagent("morphine", 5)
+		reagents.add_reagent("methylphenidate", 2)
+		reagents.add_reagent("tramadol", 3)
+
+/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/epinephrine
+	name = "epinephrine autoinjector"
+	cap_color = "blue"
+
+	New()
+		..()
+		reagents.add_reagent("epinephrine", 4)

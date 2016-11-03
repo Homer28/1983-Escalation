@@ -332,4 +332,35 @@
 			/obj/item/weapon/pill_pack/amidopyrinum = 2,
 			/obj/item/weapon/pill_pack/sydnocarbum = 4,
 			/obj/item/weapon/pill_pack/cystamine = 2,
+			/obj/item/clothing/gloves/latex = 1,
 			/obj/item/weapon/gauze_pack/ipp = 6)
+
+/obj/item/weapon/storage/box/comlifbag
+	name = "CLB"
+	desc = "That's the Combat Lifesaver Bag."
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_backpacks.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_backpacks.dmi',
+		)
+	icon_state = "medicbag"
+	item_state = null
+	//most backpacks use the default backpack state for inhand overlays
+	item_state_slots = list(
+		slot_l_hand_str = "medicbag",
+		slot_r_hand_str = "medicbag",
+		)
+	w_class = 4
+	slot_flags = SLOT_BELT
+	max_w_class = 2
+	max_storage_space = DEFAULT_LARGEBOX_STORAGE
+	startswith = list(
+			/obj/item/weapon/pill_pack/morphine = 3,
+			/obj/item/weapon/pill_pack/paracetamol = 2,
+			/obj/item/weapon/pill_pack/doxycycline = 2,
+			/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/promedolum = 6,
+			/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/quickclot = 6,
+			/obj/item/clothing/gloves/latex = 1,
+			/obj/item/weapon/gauze_pack/gauze = 6,
+			/obj/item/weapon/reagent_containers/hypospray/autoinjector/combat/epinephrine = 3,
+			/obj/item/weapon/pill_pack/naloxone = 3,
+			/obj/item/weapon/pill_pack/promethazine = 2)

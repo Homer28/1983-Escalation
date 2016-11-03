@@ -717,3 +717,137 @@
 	..()
 	M.druggy = max(M.druggy, 10)
 	M.hallucination = max(M.hallucination, 5)
+
+/datum/reagent/hemostatic
+	name = "hemostatic powder"
+	id = "hemostatic"
+	description = "Hemostatic is the medical reagent used to stop minor bleeding."
+	taste_description = "powder"
+	taste_mult = 0.1
+	reagent_state = SOLID
+	color = "#808080"
+	flags = IGNORE_MOB_SIZE
+	metabolism = 0.5
+
+/datum/reagent/hemostatic/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.heal_organ_damage(3 * removed, 0)
+
+/datum/reagent/morphine
+	name = "Morphine"
+	id = "morphine"
+	description = "Morphine is the powerful and very addictive painkiller."
+	taste_description = "bitterness"
+	taste_mult = 0.1
+	reagent_state = LIQUID
+	color = "#800080"
+	flags = IGNORE_MOB_SIZE
+	overdose = 5
+	metabolism = 0.01
+
+/datum/reagent/morphine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.add_chemical_effect(CE_PAINKILLER, 150)
+	M.add_chemical_effect(CE_PULSE, 1)
+	if(prob(5))
+		M.emote(pick("twitch", "blink_r", "shiver"))
+
+/datum/reagent/morphine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 2)
+	M.make_dizzy(5)
+	M.make_jittery(5)
+	M.confused += 2
+	M.drowsyness += 2
+
+/datum/reagent/naloxone
+	name = "Naloxone"
+	id = "naloxone"
+	description = "A morphine-based drug used to neutralize the morphine."
+	reagent_state = LIQUID
+	color = "#605048"
+	overdose = REAGENTS_OVERDOSE
+	metabolism = 0.05
+
+/datum/reagent/naloxone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	M.dizziness = 0
+	M.drowsyness = 0
+	M.stuttering = 0
+	M.confused = 0
+	if(M.ingested)
+		for(var/datum/reagent/R in M.ingested.reagent_list)
+			if(istype(R, /datum/reagent/morphine))
+				R.dose = max(R.dose - removed * 5, 0)
+
+
+/datum/reagent/epinephrine
+	name = "Epinephrine"
+	id = "epinephrine"
+	description = "Epinephrine is a powerful adrenaline-based used to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
+	taste_description = "bitterness"
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose = 6
+	metabolism = 0.1
+
+/datum/reagent/epinephrine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	M.SetParalysis(0)
+	M.SetWeakened(0)
+	M.add_chemical_effect(CE_PAINKILLER, 300)
+	M.adjustToxLoss(rand(2))
+
+/datum/reagent/epinephrine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.stat != 1)
+			if(H.losebreath >= 10)
+				H.losebreath = max(10, H.losebreath - 10)
+			H.adjustOxyLoss(2)
+			H.Weaken(10)
+		M.add_chemical_effect(CE_NOPULSE, 1)
+
+
+/datum/reagent/promethazine
+	name = "Promethazine"
+	id = "promethazine"
+	description = "That's the powerful neuroleptic."
+	reagent_state = LIQUID
+	color = "#FF80BF"
+	metabolism = 0.03
+	data = 0
+	overdose = 10
+
+/datum/reagent/promethazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(volume <= 0.1 && dose >= 0.5 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+		data = world.time
+		M << "<span class='warning'>Something is wrong...</span>"
+	else
+		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+			data = world.time
+			if(prob(90))
+				M << "<span class='notice'>You didn't afraid of anything.</span>"
+				M.adjustToxLoss(-3 * removed)
+			else
+				M << "<span class='warning'>Everything is terrible!</span>"
+				M.emote(pick("twitch", "drool", "moan", "gasp"))
+				M.hallucination = max(M.hallucination, 100)
+				M.adjustToxLoss(-3 * removed)
+				M.confused += 2
+				M.drowsyness += 2
+
+/datum/reagent/promethazine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.hallucination = max(M.hallucination, 2)
+	M.make_dizzy(5)
+	M.make_jittery(5)
+	M.confused += 2
+	M.drowsyness += 2
+	M.emote(pick("twitch", "drool", "moan", "gasp"))
+	M.adjustToxLoss(3)

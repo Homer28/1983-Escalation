@@ -429,3 +429,23 @@
 	//no special effects, but the explosion is pretty big (same as a supermatter shard).
 	explosion(src.loc, 3, 6, 12, 16, 1)
 	qdel(src)
+
+/obj/machinery/power/port_gen/pacman/wood
+	name = "Wood Portable Generator"
+	desc = "A power generator runs on unprocessed wood planks. Rated for 15 kW maximum safe output!"
+	icon_state = "portgen2"
+	sheet_path = /obj/item/stack/material/r_wood
+	sheet_name = "Wood Planks"
+
+	power_gen = 40000 //watts
+	max_power_output = 20
+	max_safe_output = 15
+	time_per_sheet = 576
+	max_temperature = 2000
+	temperature_gain = 80
+	board_path = /obj/item/weapon/circuitboard/pacman/wood
+
+/obj/machinery/power/port_gen/pacman/wood/explode()
+	//no special effects, but the explosion is kinda big (same as a supermatter shard).
+	explosion(src.loc, 1, 3, 6, 8, 1)
+	qdel(src)

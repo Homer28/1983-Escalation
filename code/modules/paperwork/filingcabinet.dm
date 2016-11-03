@@ -22,9 +22,15 @@
 	name = "chest drawer"
 	icon_state = "chestdrawer"
 
+/obj/structure/filingcabinet/chestdrawerwood
+	name = "chest drawer"
+	icon_state = "chestdrawerwood"
 
 /obj/structure/filingcabinet/filingcabinet	//not changing the path to avoid unecessary map issues, but please don't name stuff like this in the future -Pete
 	icon_state = "tallcabinet"
+
+/obj/structure/filingcabinet/filingcabinetwood	//not changing the path to avoid unecessary map issues, but please don't name stuff like this in the future -Pete
+	icon_state = "tallcabinetwood"
 
 
 /obj/structure/filingcabinet/initialize()
@@ -151,7 +157,7 @@
 				var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(src)
 				P.info = "<CENTER><B>Medical Record</B></CENTER><BR>"
 				P.info += "Name: [G.fields["name"]] ID: [G.fields["id"]]<BR>\nSex: [G.fields["sex"]]<BR>\nAge: [G.fields["age"]]<BR>\nFingerprint: [G.fields["fingerprint"]]<BR>\nPhysical Status: [G.fields["p_stat"]]<BR>\nMental Status: [G.fields["m_stat"]]<BR>"
-				
+
 				P.info += "<BR>\n<CENTER><B>Medical Data</B></CENTER><BR>\nBlood Type: [M.fields["b_type"]]<BR>\nDNA: [M.fields["b_dna"]]<BR>\n<BR>\nMinor Disabilities: [M.fields["mi_dis"]]<BR>\nDetails: [M.fields["mi_dis_d"]]<BR>\n<BR>\nMajor Disabilities: [M.fields["ma_dis"]]<BR>\nDetails: [M.fields["ma_dis_d"]]<BR>\n<BR>\nAllergies: [M.fields["alg"]]<BR>\nDetails: [M.fields["alg_d"]]<BR>\n<BR>\nCurrent Diseases: [M.fields["cdi"]] (per disease info placed in log/comment section)<BR>\nDetails: [M.fields["cdi_d"]]<BR>\n<BR>\nImportant Notes:<BR>\n\t[M.fields["notes"]]<BR>\n<BR>\n<CENTER><B>Comments/Log</B></CENTER><BR>"
 				var/counter = 1
 				while(M.fields["com_[counter]"])

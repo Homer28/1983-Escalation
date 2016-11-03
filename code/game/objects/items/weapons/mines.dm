@@ -8,7 +8,7 @@
 
 /obj/item/weapon/mine/attack_self(mob/user as mob)
 	new /obj/effect/mine/m16apm(user.loc)
-	user.visible_message("<span class='warning'>[user] arms the mine! Be careful not to step on it!</span>","<span_class='warning'>You arm the mine and lay it on the floor. Be careful not to step on it!</span>")
+	user.visible_message("<span class='warning'>[user] arms the mine! Be careful not to step on it!</span>")
 	qdel(src)
 	user.regenerate_icons()
 
@@ -19,7 +19,7 @@
 		qdel(src)*/
 	//vars stolen for fragification
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
-	var/num_fragments = 180  //total number of fragments produced by the grenade
+	var/num_fragments = 220  //total number of fragments produced by the grenade
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
 	var/spread_range = 8 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
 
@@ -50,7 +50,7 @@
 				P.attack_mob(M, 0, 0)
 			else
 				P.attack_mob(M, 0, 100) //otherwise, allow a decent amount of fragments to pass
-
+	explosion(loc, 0, 0, 2, 2)
 	qdel(src)
 
 /obj/effect/mine/m16apm
@@ -62,7 +62,7 @@
 	icon_state = "m16apm-armed"
 
 /obj/effect/mine/m16apm/attack_hand(mob/user as mob)
-	user.visible_message("<span class='warning'>[user] disarms the mine!</span>","<span_class='warning'>You disarm the mine. It's safe to pick up now!</span>")
+	user.visible_message("<span class='warning'>[user] disarms the mine!</span>")
 	icon_state = "m16apm"
 	new /obj/item/weapon/mine/m16apm(src.loc)
 	qdel(src)
@@ -77,7 +77,7 @@
 
 /obj/item/weapon/mine/ozm72/attack_self(mob/user as mob)
 	new /obj/effect/mine/ozm72(user.loc)
-	user.visible_message("<span class='warning'>[user] arms the mine! Be careful not to step on it!</span>","<span_class='warning'>You arm the mine and lay it on the floor. Be careful not to step on it!</span>")
+	user.visible_message("<span class='warning'>[user] arms the mine! Be careful not to step on it!</span>")
 	qdel(src)
 	user.regenerate_icons()
 
@@ -88,7 +88,7 @@
 		qdel(src)*/
 	//vars stolen for fragification
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
-	var/num_fragments = 200  //total number of fragments produced by the grenade
+	var/num_fragments = 260  //total number of fragments produced by the grenade
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
 	var/spread_range = 6 //leave as is, for some reason setting this higher makes the spread pattern have gaps close to the epicenter
 
@@ -119,6 +119,7 @@
 				P.attack_mob(M, 0, 0)
 			else
 				P.attack_mob(M, 0, 100) //otherwise, allow a decent amount of fragments to pass
+	explosion(loc, 0, 0, 2, 2)
 
 	qdel(src)
 
@@ -131,7 +132,7 @@
 	icon_state = "ozm72-armed"
 
 /obj/effect/mine/ozm72/attack_hand(mob/user as mob)
-	user.visible_message("<span class='warning'>[user] disarms the mine!</span>","<span_class='warning'>You disarm the mine. It's safe to pick up now!</span>")
+	user.visible_message("<span class='warning'>[user] disarms the mine!</span>")
 	icon_state = "ozm72"
 	new /obj/item/weapon/mine/ozm72(src.loc)
 	qdel(src)
